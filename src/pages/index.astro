@@ -1,33 +1,61 @@
 ---
-
+const lang = "en";
+import GitHubLogo from "../assets/github.svg";
+import LinkedInLogo from "../assets/linkedin.svg";
 ---
 
 <!doctype html>
-<html lang="en">
+<html
+  lang={lang}
+  class="flex min-h-screen flex-col items-center justify-center bg-zinc-900 text-gray-400"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- TODO: set favicon -->
     <title>Joel Lau</title>
   </head>
-  <body>
-    <header>
-      <nav>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </nav>
-    </header>
-    <article id="about">
-      <p>
-        Hi 👋, I'm <span>Joel Lau</span>.
+  <body class="mr-10 flex flex-col gap-2 pr-4 sm:gap-5">
+    <main id="about" class="mt-16 flex w-full flex-col sm:text-5xl">
+      <p
+        class="mb-5 text-6xl font-extrabold text-gray-200 xs:text-7xl sm:text-9xl"
+      >
+        Joel&nbsp;Lau
       </p>
-      <p>I'm a full stack developer currently based in Singapore.</p>
-    </article>
-    <section id="contact">
-      <nav>
-        <li><a href="https://linkedin.com/in/joel-lau">LinkedIn</a></li>
-        <li><a href="https://github.com/JoelLau">GitHub</a></li>
-      </nav>
-    </section>
+      <p class="pl-1">
+        Software engineer since <time datetime="2018">2018</time>.
+      </p>
+      <p class="pl-1">
+        Currently using <a
+          href="https://linkedin.com/in/joel-lau"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="underline hover:text-white">Go</a
+        > &amp; <a
+          href="https://linkedin.com/in/joel-lau"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="underline hover:text-white">Angular</a
+        >.
+      </p>
+    </main>
   </body>
+  <section class="w-full pl-0.5">
+    <nav class="mt-2 flex list-none items-center justify-start gap-2 px-1">
+      <a
+        href="https://linkedin.com/in/joel-lau"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:text-white"
+        ><LinkedInLogo class="size-4 fill-gray-400 hover:fill-white" /></a
+      >
+      <a
+        href="https://github.com/JoelLau"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:text-white"
+        ><GitHubLogo class="size-4 fill-gray-400 hover:fill-white" /></a
+      >
+    </nav>
+  </section>
 </html>
